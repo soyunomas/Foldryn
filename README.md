@@ -94,5 +94,5 @@ journalctl --user -u foldrynd -f
 You can view the history of moved files using the CLI tool:
 
 ```bash
-foldrynctl -config ~/.config/foldryn/config.toml history -n 20
+foldrynctl history -n 20
 ```
