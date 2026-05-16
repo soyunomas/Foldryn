@@ -1,0 +1,30 @@
+[app]
+dry_run = true
+history_path = "~/.local/share/foldryn/history.jsonl"
+notifications = true
+settle_delay_ms = 1500
+
+[[watch]]
+path = "~/Descargas"
+recursive = false
+
+[[rules]]
+name = "Images"
+enabled = true
+extensions = [".jpg", ".jpeg", ".png", ".gif", ".webp", ".svg"]
+destination = "~/Descargas/Images/{year}/{month}"
+rename = "{basename}{ext}"
+
+[[rules]]
+name = "Archives"
+enabled = true
+extensions = [".zip", ".tar", ".gz", ".bz2", ".xz", ".7z", ".rar"]
+destination = "~/Descargas/Archives/{year}/{month}"
+rename = "{basename}{ext}"
+
+[[rules]]
+name = "Documents"
+enabled = true
+extensions = [".pdf", ".doc", ".docx", ".odt", ".txt", ".md"]
+destination = "~/Descargas/Documents/{year}/{month}"
+rename = "{basename}{ext}"

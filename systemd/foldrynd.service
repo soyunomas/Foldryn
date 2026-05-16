@@ -1,0 +1,12 @@
+[Unit]
+Description=Foldryn file automation daemon
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/foldrynd -config %h/.config/foldryn/config.toml
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=default.target
